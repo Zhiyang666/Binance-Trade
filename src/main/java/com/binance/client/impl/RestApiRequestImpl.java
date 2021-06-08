@@ -435,6 +435,11 @@ class RestApiRequestImpl {
         return request;
     }
 
+    /**
+     * 获取相应币种过去24小时的信息
+     * @param symbol
+     * @return
+     */
     RestApiRequest<List<PriceChangeTickerEntity>> get24hrTickerPriceChange(String symbol) {
         RestApiRequest<List<PriceChangeTickerEntity>> request = new RestApiRequest<>();
         UrlParamsBuilder builder = UrlParamsBuilder.build()
@@ -1075,7 +1080,7 @@ class RestApiRequestImpl {
         return request;
     }
 
-    RestApiRequest<List<MyTrade>> getAccountTrades(String symbol, Long startTime, Long endTime, 
+    RestApiRequest<List<MyTrade>> getAccountTrades(String symbol, Long startTime, Long endTime,
             Long fromId, Integer limit) {
         RestApiRequest<List<MyTrade>> request = new RestApiRequest<>();
         UrlParamsBuilder builder = UrlParamsBuilder.build()
@@ -1113,7 +1118,7 @@ class RestApiRequestImpl {
         return request;
     }
 
-    RestApiRequest<List<Income>> getIncomeHistory(String symbol, IncomeType incomeType, Long startTime, Long endTime, 
+    RestApiRequest<List<Income>> getIncomeHistory(String symbol, IncomeType incomeType, Long startTime, Long endTime,
             Integer limit) {
         RestApiRequest<List<Income>> request = new RestApiRequest<>();
         UrlParamsBuilder builder = UrlParamsBuilder.build()
@@ -1190,8 +1195,8 @@ class RestApiRequestImpl {
                 .putToUrl("startTime", startTime)
                 .putToUrl("endTime", endTime)
                 .putToUrl("limit", limit);
-        
-        
+
+
 //        request.request = createRequestByGetWithSignature("/gateway-api//v1/public/future/data/openInterestHist", builder);
         request.request = createRequestByGetWithSignature("/futures/data/openInterestHist", builder);
 

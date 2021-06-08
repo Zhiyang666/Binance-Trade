@@ -41,22 +41,50 @@ public class PriceChangeTickerEntity {
      */
     private BigDecimal weightedAvgPrice;
 
+    /**
+     * 当前价格
+     */
     private BigDecimal lastPrice;
 
+    /**
+     * 当前价格的成交量
+     */
     private BigDecimal lastQty;
 
+    /**
+     * 24小时之前的价格
+     */
     private BigDecimal openPrice;
 
+    /**
+     * 24小时最高价
+     */
     private BigDecimal highPrice;
 
+
+    /**
+     * 24小时最低价
+     */
     private BigDecimal lowPrice;
 
+    /**
+     * 交易物成交量
+     */
     private BigDecimal volume;
 
+    /**
+     * 被交易物成交量
+     */
     private BigDecimal quoteVolume;
 
+    /**
+     * 开始时间
+     */
     private Long openTime;
 
+    /**
+     * 结束时间
+     */
     private Long closeTime;
 
     private Long firstId;

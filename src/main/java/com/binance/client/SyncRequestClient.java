@@ -114,7 +114,7 @@ public interface SyncRequestClient {
 
     /**
      * Get 24 hour rolling window price change statistics.
-     *
+     * 获取相应币种过去24小时的信息
      * @return 24 hour rolling window price change statistics.
      */
     List<PriceChangeTickerEntity> get24hrTickerPriceChange(String symbol);
@@ -146,7 +146,7 @@ public interface SyncRequestClient {
      * @return
      */
     List<Object> postBatchOrders(String batchOrders);
-    
+
     /**
      * Send in a new order.
      *
@@ -240,21 +240,21 @@ public interface SyncRequestClient {
      * @return All orders.
      */
     List<Order> getAllOrders(String symbol, Long orderId, Long startTime, Long endTime, Integer limit);
-  
+
     /**
      * Get account balances.
      *
      * @return Balances.
      */
     List<AccountBalance> getBalance();
-  
+
     /**
      * Get current account information.
      *
      * @return Current account information.
      */
     AccountInformation getAccountInformation();
-  
+
     /**
      * Change initial leverage.
      *
@@ -328,14 +328,14 @@ public interface SyncRequestClient {
     /**
      * Long/Short Ratio (MARKET DATA)
      *
-     * @return global Long/Short Ratio. 
+     * @return global Long/Short Ratio.
      */
     List<CommonLongShortRatio> getGlobalAccountRatio(String symbol, PeriodType period, Long startTime, Long endTime, Integer limit);
 
     /**
      * Taker Long/Short Ratio (MARKET DATA)
      *
-     * @return Taker Long/Short Ratio. 
+     * @return Taker Long/Short Ratio.
      */
     List<TakerLongShortStat> getTakerLongShortRatio(String symbol, PeriodType period, Long startTime, Long endTime, Integer limit);
 
