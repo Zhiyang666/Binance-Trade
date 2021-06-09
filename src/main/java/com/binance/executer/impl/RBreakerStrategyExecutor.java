@@ -38,7 +38,7 @@ public class RBreakerStrategyExecutor implements StrategyExecutor {
             }
         }
     }
-
+  
 
     private class RBreakerRecord{
         //中心价位P = （H + C + L）/3
