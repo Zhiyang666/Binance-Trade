@@ -10,8 +10,6 @@ public enum StrategyConstant {
     ;
 
 
-
-
     private String type;
 
     private String name;

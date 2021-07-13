@@ -17,7 +17,7 @@ public class TradeRecordEntity {
     String coinType;
 
     // 数量
-    Double count;
+    Double num;
 
     // 交易类型 0.开多 1.平多 2.开空 3.平空
     Integer tradeType;
