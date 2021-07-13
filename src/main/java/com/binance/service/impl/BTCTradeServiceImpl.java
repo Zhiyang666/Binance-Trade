@@ -3,7 +3,9 @@ package com.binance.service.impl;
 import com.binance.entity.AccountEntity;
 import com.binance.entity.TradeRecordEntity;
 import com.binance.service.TradeService;
+import org.springframework.stereotype.Service;
 
+@Service("BTCTradeService")
 public class BTCTradeServiceImpl implements TradeService {
     @Override
     public AccountEntity buy(AccountEntity account, TradeRecordEntity record) {

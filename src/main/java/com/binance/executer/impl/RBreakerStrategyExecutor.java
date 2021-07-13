@@ -8,12 +8,14 @@ import com.binance.executer.StrategyExecutor;
 import com.binance.service.TradeService;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Component
 public class RBreakerStrategyExecutor implements StrategyExecutor {
 
+    @Resource( name="BTCTradeService")
     TradeService tradeService;
 
     Map<Long,RBreakerRecord>  rRecordMap = new HashMap<>();
