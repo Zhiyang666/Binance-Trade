@@ -41,7 +41,7 @@ public class GetCandlestick {
                 System.out.println("报错,时间为:"+lastTime);
             }
 
-
+            System.out.println();
         }
 
     }
