@@ -16,6 +16,7 @@ import com.binance.client.model.market.*;
 import com.binance.client.model.trade.*;
 import com.binance.client.model.enums.*;
 
+import com.binance.entity.candlestick.CandlestickEntity;
 import com.binance.entity.PriceChangeTickerEntity;
 import okhttp3.Request;
 import org.apache.commons.lang3.StringUtils;
@@ -344,9 +345,9 @@ class RestApiRequestImpl {
         return request;
     }
 
-    RestApiRequest<List<Candlestick>> getCandlestick(String symbol, CandlestickInterval interval, Long startTime,
-                                                     Long endTime, Integer limit) {
-        RestApiRequest<List<Candlestick>> request = new RestApiRequest<>();
+    RestApiRequest<List<CandlestickEntity>> getCandlestick(String symbol, CandlestickInterval interval, Long startTime,
+                                                           Long endTime, Integer limit) {
+        RestApiRequest<List<CandlestickEntity>> request = new RestApiRequest<>();
         UrlParamsBuilder builder = UrlParamsBuilder.build()
                 .putToUrl("symbol", symbol)
                 .putToUrl("interval", interval)
@@ -356,10 +357,10 @@ class RestApiRequestImpl {
         request.request = createRequestByGet("/api/v1/klines", builder);
 
         request.jsonParser = (jsonWrapper -> {
-            List<Candlestick> result = new LinkedList<>();
+            List<CandlestickEntity> result = new LinkedList<>();
             JsonWrapperArray dataArray = jsonWrapper.getJsonArray("data");
             dataArray.forEachAsArray((item) -> {
-                Candlestick element = new Candlestick();
+                CandlestickEntity element = new CandlestickEntity();
                 element.setOpenTime(item.getLongAt(0));
                 element.setOpen(item.getBigDecimalAt(1));
                 element.setHigh(item.getBigDecimalAt(2));
@@ -372,6 +373,7 @@ class RestApiRequestImpl {
                 element.setTakerBuyBaseAssetVolume(item.getBigDecimalAt(9));
                 element.setTakerBuyQuoteAssetVolume(item.getBigDecimalAt(10));
                 element.setIgnore(item.getBigDecimalAt(11));
+                element.setInterval(interval.toString());
                 result.add(element);
             });
 

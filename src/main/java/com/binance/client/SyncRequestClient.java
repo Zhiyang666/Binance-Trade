@@ -6,6 +6,7 @@ import com.binance.client.model.ResponseResult;
 import com.binance.client.model.market.*;
 import com.binance.client.model.enums.*;
 import com.binance.client.model.trade.*;
+import com.binance.entity.candlestick.CandlestickEntity;
 import com.binance.entity.PriceChangeTickerEntity;
 
 import java.util.List;
@@ -92,11 +93,19 @@ public interface SyncRequestClient {
     List<AggregateTrade> getAggregateTrades(String symbol, Long fromId, Long startTime, Long endTime, Integer limit);
 
     /**
-     * Get kline/candlestick bars for a symbol.
-     *
-     * @return Kline/candlestick bars for a symbol.
+     *   Get kline/candlestick bars for a symbol.
+     *      k线数据
+     *   @return Kline/candlestick bars for a symbo
+     * @param symbol 币种标志
+     * @param interval 时间间隔
+     * @param startTime 开始时间
+     * @param endTime 结束时间
+     * @param limit 条数，默认500 最大1000
+     * @return
      */
-    List<Candlestick> getCandlestick(String symbol, CandlestickInterval interval, Long startTime, Long endTime, Integer limit);
+
+
+    List<CandlestickEntity> getCandlestick(String symbol, CandlestickInterval interval, Long startTime, Long endTime, Integer limit);
 
     /**
      * Get mark price for a symbol.

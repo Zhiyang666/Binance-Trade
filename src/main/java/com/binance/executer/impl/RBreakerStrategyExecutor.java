@@ -25,7 +25,7 @@ public class RBreakerStrategyExecutor implements StrategyExecutor {
     //止损比率 20%
     Double STOP_LOSS_RATE = 0.2;
     //时间跨度
-    Long timeSpan = 1000L*60*15;
+    Long timeSpan = 1000L*60*60*24;
     //coinType
     String coinType = "USDT/BTC";
     @Override
