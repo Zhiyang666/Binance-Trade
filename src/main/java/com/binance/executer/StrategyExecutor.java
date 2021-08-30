@@ -10,5 +10,5 @@ import java.util.Collection;
 public interface StrategyExecutor {
     Boolean isMe(String tag);
 
-    void execute(Collection<SubjectEntity> collection);
+    void execute(Collection<SubjectEntity> collection) throws InterruptedException;
 }

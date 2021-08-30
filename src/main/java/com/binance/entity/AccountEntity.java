@@ -16,7 +16,7 @@ public class AccountEntity {
     //持仓数量
     Double holdNum=0d;
 
-    //持仓usdt
+    //持仓价值usdt
     Double holdMoney=0d;
 
     //持仓价格

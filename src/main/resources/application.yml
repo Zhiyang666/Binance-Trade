@@ -10,7 +10,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+#    show-sql: true
     database-platform: org.hibernate.dialect.SQLiteDialect
 
 binance:
@@ -18,7 +18,7 @@ binance:
     ip: "127.0.0.1"
     port: 19180
   api:
-    api-key: ""
-    secret-key: ""
+    api-key: "pNGotE6gjtgtBVcUf2cRcKX7RapDhzLzvpoECvCWX0QX7bG6SKY0hn8AX6U401B8"
+    secret-key: "b69LtQY25Ag6WkFdNkD61dHnsQ5NskuDtsCSJW0g5Xwt26i7yksv1VQarsUAUAmH"
 logging:
   config: classpath:log4j2-pro.xml

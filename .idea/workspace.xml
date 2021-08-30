@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3a2e229-f642-4b45-a36b-7714cf3eb30d" name="Default Changelist" comment="zhiyang币安交易启动!">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/binance/entity/candlestick/CandlestickEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/binance/entity/candlestick/CandlestickMultiKeysClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/binance/repository/CandlestickRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b1711f4-e9ed-4e3b-b763-6e89b0fbc88e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b1711f4-e9ed-4e3b-b763-6e89b0fbc88e.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/binance/constant/TimeConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/binance/service/DataCollectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/binance/service/impl/CandlestickServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/binance/client/examples/backtest/BackTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/client/SyncRequestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/client/SyncRequestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/client/impl/RestApiRequestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/client/impl/RestApiRequestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/client/impl/SyncRequestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/client/impl/SyncRequestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/client/model/market/Candlestick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/BinanceClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/BinanceClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/entity/AccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/entity/AccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/entity/SubjectEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/entity/SubjectEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/executer/StrategyExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/executer/StrategyExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/executer/impl/RBreakerStrategyExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/executer/impl/RBreakerStrategyExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/repository/CandlestickRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/repository/CandlestickRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/binance/service/impl/BTCTradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/binance/service/impl/BTCTradeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sqlite/binance.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sqlite/binance.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/binance/client/examples/market/GetCandlestick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/binance/client/examples/market/GetCandlestick.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -107,7 +105,7 @@
       <recent name="com.binance.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetCandlestick">
+  <component name="RunManager" selected="JUnit.BackTest.test">
     <configuration name="GetCandlestick" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.binance.client.examples.market.GetCandlestick" />
       <module name="binance-client" />
@@ -145,6 +143,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BackTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binance-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.binance.client.examples.backtest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.binance.client.examples.backtest" />
+      <option name="MAIN_CLASS_NAME" value="com.binance.client.examples.backtest.BackTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Get24hrTickerPriceChange.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binance-client" />
       <extension name="coverage">
@@ -177,35 +191,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinanceClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="binance-client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.binance.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.binance.BinanceClientApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.RBreakerStrategyExecutor" />
-      <item itemvalue="JUnit.Get24hrTickerPriceChange.test" />
-      <item itemvalue="Spring Boot.BinanceClientApplication" />
       <item itemvalue="Application.GetCandlestick" />
+      <item itemvalue="JUnit.Get24hrTickerPriceChange.test" />
       <item itemvalue="JUnit.GetCandlestick.test" />
+      <item itemvalue="JUnit.BackTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BackTest.test" />
+        <item itemvalue="Application.RBreakerStrategyExecutor" />
         <item itemvalue="Application.GetCandlestick" />
         <item itemvalue="JUnit.GetCandlestick.test" />
         <item itemvalue="JUnit.Get24hrTickerPriceChange.test" />
-        <item itemvalue="Application.RBreakerStrategyExecutor" />
-        <item itemvalue="Spring Boot.BinanceClientApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +252,9 @@
       <workItem from="1626144736978" duration="186000" />
       <workItem from="1626144942047" duration="16115000" />
       <workItem from="1626227253411" duration="619000" />
-      <workItem from="1627539729547" duration="11063000" />
+      <workItem from="1627539729547" duration="11455000" />
+      <workItem from="1627552306264" duration="10221000" />
+      <workItem from="1630310011703" duration="6630000" />
     </task>
     <task id="LOCAL-00001" summary="zhiyang币安交易启动!">
       <created>1621086371249</created>
@@ -290,11 +291,42 @@
       <option name="project" value="LOCAL" />
       <updated>1627539953931</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="zhiyang币安交易启动!">
+      <created>1627551921029</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1627551921029</updated>
+    </task>
+    <task id="LOCAL-00007" summary="提交测试">
+      <created>1627553146322</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1627553146322</updated>
+    </task>
+    <task id="LOCAL-00008" summary="删除db">
+      <created>1627612813472</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627612813472</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -312,21 +344,22 @@
     <MESSAGE value="zhiyang币安交易rbreaker策略" />
     <MESSAGE value="完善R-BREAKER流程，构造接口&#10;未完成:&#10;1、数据采集&#10;2、回测" />
     <MESSAGE value="zhiyang币安交易启动!" />
-    <option name="LAST_COMMIT_MESSAGE" value="zhiyang币安交易启动!" />
+    <MESSAGE value="提交测试" />
+    <MESSAGE value="删除db" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/binance/client/examples/market/Get24hrTickerPriceChange.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/binance/client/examples/backtest/BackTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/binance/client/examples/market/GetCandlestick.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="18" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
